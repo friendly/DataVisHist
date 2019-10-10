@@ -25,19 +25,29 @@ and tell its story.
 This graph uses what at the time was a novel graphic form
 of small little distributions showing the relative strength
 of each civilization over time. It was recently re-invented
-and called a ``ridgeline'' plot because it resembles a set of
+and called a "ridgeline" plot because it resembles a set of
 mountain ridges. See further discussion of this graph shown
-as Figure~\ref{fig:playfair1805-inquiry}.  
+in [Chapter 5](ch05-playfair.html).  
+
+# Book description
+
+To function in modern society we must absorb and understand complex data at a breakneck pace. The most efficient way to comprehend and convey complex information is through data-based graphics. This book is an exploration and celebration of the origins and, to some extent, future of graphical methods of data presentation.
+
+It aims to give a comprehensive history of data visualization with an emphasis on the questions: 
+
+* How did the graphic depictions of numbers arise? 
+* Why? What factors led to the key innovations in graphs and diagrams that are commonplace today? 
+* How did graphic inventions make a difference in understanding natural and social phenomena and communicating results?
+
+Two major themes connect the topics and chronology of this account. 
+
+* First, we take the view that the principal innovations over the last 400 years arose in conjunction with a cognitive revolution we call "visual thinking," the idea that some problems and their solutions could be so much more clearly addressed and communicated in visual displays, rather than just words or tables of numbers. 
+
+* Second, we try to show how the intellectual, scientific and graphical questions behind these innovations can be better understood by trying to reproduce them today.
+
 
 # Aims {-}
 
 These pages are an initial sketch of a web site to accompany our forthcoming book to be published by Harvard University Press.
 We try to provide an overview of the book, and include some color images and text that does not appear in the printed edition.
-
-This book aims to give a comprehensive history of data visualization with an emphasis on these questions:
-
-* How did the graphic depictions of numbers arise? 
-* More importantly, **why**?
-    - What factors led to the key innovations in graphs and diagrams that are commonplace today? 
-    - How did graphic inventions make a difference in understanding natural and social phenomena and communicating results?
 
