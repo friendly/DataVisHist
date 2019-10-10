@@ -1,0 +1,25 @@
+      menu:
+        - text: "Preface"
+          href: ch01-preface.html
+        - text: "1.  In the Beginning..."
+          href: ch01-intro.html
+        - text: "2.  The First Graph Got It Right"
+          href: ch02-langren.html
+        - text: "3.  The Birth of Data"
+          href: ch03-data.html
+        - text: "4.  Vital Statistics"
+          href: ch04-vital.html
+        - text: "5.  The Big Bang"
+          href: ch05-playfair.html
+        - text: "6.  The Origin of the Scatterplot"
+          href: ch06-scat.html
+        - text: "7.  The Golden Age"
+          href: ch07-golden.html
+        - text: "8.  Escaping Flatland"
+          href: ch08-fatland.html
+        - text: "9.  Visualizing Time and Space"
+          href: ch09-motion.html
+        - text: "10.  Graphs as Poetry"
+          href: ch010-poetry.html
+        - text: "11.  Afterword"
+          href: ch011-afterword.html

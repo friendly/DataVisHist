@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>ch01-intro.utf8.md</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="css\styles.css" type="text/css" />
+<link rel="stylesheet" href="css\chapters.css" type="text/css" />
+<link rel="stylesheet" href="css\toc.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Data Visualization: A History of Visualization and Graphic Communication</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home fa-2x"></span>
+     
+    Home
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-book fa-2x"></span>
+     
+    Chapters
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="ch01-preface.html">Preface</a>
+    </li>
+    <li>
+      <a href="ch01-intro.html">1.  In the Beginning...</a>
+    </li>
+    <li>
+      <a href="ch02-langren.html">2.  The First Graph Got It Right</a>
+    </li>
+    <li>
+      <a href="ch03-data.html">3.  The Birth of Data</a>
+    </li>
+    <li>
+      <a href="ch04-vital.html">4.  Vital Statistics</a>
+    </li>
+    <li>
+      <a href="ch05-playfair.html">5.  The Big Bang</a>
+    </li>
+    <li>
+      <a href="ch06-scat.html">6.  The Origin of the Scatterplot</a>
+    </li>
+    <li>
+      <a href="ch07-golden.html">7.  The Golden Age</a>
+    </li>
+    <li>
+      <a href="ch08-fatland.html">8.  Escaping Flatland</a>
+    </li>
+    <li>
+      <a href="ch09-motion.html">9.  Visualizing Time and Space</a>
+    </li>
+    <li>
+      <a href="ch010-poetry.html">10.  Graphs as Poetry</a>
+    </li>
+    <li>
+      <a href="ch011-afterword.html">11.  Afterword</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="authors.html">
+    <span class="fa fa-user-tie  fa-2x"></span>
+     
+    Authors
+  </a>
+</li>
+<li>
+  <a href="about.html">
+    <span class="fa fa-file  fa-2x"></span>
+     
+    About
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<!-- banner here -->
+<p><img src="images/banner.png" alt="banner"></p>
+<div class="contents">
+<h1 class="tocpage">
+Chapter 1: In the Beginning …
+</h1>
+<hr class="tocpage">
+<!-- chapter quote -->
+<blockquote>
+<p><em>If you would understand anything, observe its beginning and its development.</em></p>
+<p>Aristotle</p>
+</blockquote>
+<!-- load R scripts -->
+<pre class="r"><code>source(&quot;R/chfigs.R&quot;)</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre><code>## Warning: package &#39;tidyr&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## Warning: package &#39;glue&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## 
+## Attaching package: &#39;glue&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     collapse</code></pre>
+<div class="row">
+<div class="col-md-6">
+<pre><code>&lt;!-- prelude-inserted  --&gt;
+&lt;div class=&quot;chapterprelude&quot;&gt;
+&lt;h3&gt;Synopsis&lt;/h3&gt;
+&lt;!-- insert prelude here --&gt;
+This chapter is an overview of the larger questions and themes that
+provide a context for the book. We consider the relations among numerical data, evidence for an argument 
+and graphs,
+and then describe some of the pre-history of the visual representation of numbers and the early rise of 
+visualization itself. The story continues to the rise of empirical thinking in philosophy and
+science around the 16th Century and the concomitant
+remarkable development of the visual representation of numbers to communicate quantitative phenomena.
+&lt;/div&gt;</code></pre>
+</div>
+<div class="col-md-6">
+<pre><code>&lt;h3&gt;Contents&lt;/h3&gt;
+&lt;!-- insert minitoc here --&gt;
+&lt;dl class=&quot;chaptoc&quot;&gt;
+  &lt;dd&gt;1.1. Data, evidence and graphs&lt;/dd&gt;
+  &lt;dd&gt;1.2. Words, numbers and pictures&lt;/dd&gt;
+  &lt;dd&gt;1.3. Seeing the unexpected&lt;/dd&gt;
+  &lt;dd&gt;1.4. The Rise of the Graphic Method and Visual Thinking&lt;/dd&gt;
+  &lt;dd&gt;1.5. A Golden Age&lt;/dd&gt;
+  &lt;dd&gt;1.6. Learning more&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+</div>
+</div>
+<!-- more-content -->
+<div id="more-information" class="section level3">
+<h3>More information</h3>
+<p><a href="pdf/TOGS-Ch1.pdf">Chapter 1</a> in the draft PDF version is available for free download.</p>
+</div>
+<div id="chapter-figures" class="section level3">
+<h3>Chapter figures</h3>
+<pre class="r"><code>do_chapter(1)</code></pre>
+<div class="col-md-12">
+<pre><code>&lt;ul class=&quot;media-list&quot;&gt;
+
+&lt;li class=&quot;media&quot;&gt;
+  &lt;div class=&quot;media-left&quot;&gt;
+    &lt;a href=&quot;ch01-intro/fig/alcohol-risk.jpg&quot;  class=&quot;fancybox&quot;&gt;
+      &lt;img class=&quot;media-object&quot; src=&quot;ch01-intro/fig/alcohol-risk.jpg&quot; width=&quot;250&quot; alt=&quot;...&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;h4 class=&quot;media-heading&quot;&gt;Figure 1.1&lt;/h4&gt;
+    &lt;strong&gt;Risk of alcohol&lt;/strong&gt; Weighted relative risk of developing one or more alcohol-related health problems in relation to the number of daily drinks. &lt;br/&gt;
+    &lt;em&gt;Source:&lt;/em&gt; GBD 2016 Alcohol Collaborators (2018); Courtesy of The Lancet
+  &lt;/div&gt;
+&lt;/li&gt;
+
+&lt;li class=&quot;media&quot;&gt;
+  &lt;div class=&quot;media-left&quot;&gt;
+    &lt;a href=&quot;ch01-intro/fig/measels.png&quot;  class=&quot;fancybox&quot;&gt;
+      &lt;img class=&quot;media-object&quot; src=&quot;ch01-intro/fig/measels.png&quot; width=&quot;250&quot; alt=&quot;...&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;h4 class=&quot;media-heading&quot;&gt;Figure 1.2&lt;/h4&gt;
+    &lt;strong&gt;Effect of measles vaccination&lt;/strong&gt; Incidence of measles cases in the U.S. states over 90 years and the impact of the introduction of the measles vaccine in 1964. &lt;br/&gt;
+    &lt;em&gt;Source:&lt;/em&gt; \citet {DeBoldFriedman:2015}, permission required
+  &lt;/div&gt;
+&lt;/li&gt;
+
+&lt;li class=&quot;media&quot;&gt;
+  &lt;div class=&quot;media-left&quot;&gt;
+    &lt;a href=&quot;ch01-intro/fig/numbers.png&quot;  class=&quot;fancybox&quot;&gt;
+      &lt;img class=&quot;media-object&quot; src=&quot;ch01-intro/fig/numbers.png&quot; width=&quot;250&quot; alt=&quot;...&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;h4 class=&quot;media-heading&quot;&gt;Figure 1.3&lt;/h4&gt;
+    &lt;strong&gt;Some of the graphic forms used to represent numbers&lt;/strong&gt;  &lt;br/&gt;
+    &lt;em&gt;Source:&lt;/em&gt; Author graphic, using various public domain images
+  &lt;/div&gt;
+&lt;/li&gt;
+
+&lt;li class=&quot;media&quot;&gt;
+  &lt;div class=&quot;media-left&quot;&gt;
+    &lt;a href=&quot;ch01-intro/fig/Lascaux-bull-chamber.jpg&quot;  class=&quot;fancybox&quot;&gt;
+      &lt;img class=&quot;media-object&quot; src=&quot;ch01-intro/fig/Lascaux-bull-chamber.jpg&quot; width=&quot;250&quot; alt=&quot;...&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;h4 class=&quot;media-heading&quot;&gt;Figure 1.4&lt;/h4&gt;
+    &lt;strong&gt;Lascaux&lt;/strong&gt; A section of one side of the Chamber of the Bulls from the Lascaux cave. &lt;br/&gt;
+    &lt;em&gt;Source:&lt;/em&gt; \url {https://www.histogames.com/HTML/inventaire/periodes-historiques/prehistoire.php}
+  &lt;/div&gt;
+&lt;/li&gt;
+
+&lt;li class=&quot;media&quot;&gt;
+  &lt;div class=&quot;media-left&quot;&gt;
+    &lt;a href=&quot;ch01-intro/fig/mammoths.png&quot;  class=&quot;fancybox&quot;&gt;
+      &lt;img class=&quot;media-object&quot; src=&quot;ch01-intro/fig/mammoths.png&quot; width=&quot;250&quot; alt=&quot;...&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;h4 class=&quot;media-heading&quot;&gt;Figure 1.5&lt;/h4&gt;
+    &lt;strong&gt;Visualizations of a mammoth&lt;/strong&gt;  &lt;br/&gt;
+    &lt;em&gt;Source:&lt;/em&gt; Left: \url {https://goo.gl/images/8xCpmD}, our thanks to Stephen Stigler for this figure. Right: courtesy of the Bradshaw Foundation
+  &lt;/div&gt;
+&lt;/li&gt;
+
+&lt;li class=&quot;media&quot;&gt;
+  &lt;div class=&quot;media-left&quot;&gt;
+    &lt;a href=&quot;ch01-intro/fig/Egyptmotionseries.jpg&quot;  class=&quot;fancybox&quot;&gt;
+      &lt;img class=&quot;media-object&quot; src=&quot;ch01-intro/fig/Egyptmotionseries.jpg&quot; width=&quot;250&quot; alt=&quot;...&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;h4 class=&quot;media-heading&quot;&gt;Figure 1.6&lt;/h4&gt;
+    &lt;strong&gt;Wrestling instructions&lt;/strong&gt; Successive moments of a wrestling match between two people. &lt;br/&gt;
+    &lt;em&gt;Source:&lt;/em&gt; \url {https://commons.wikimedia.org/wiki/File:Egyptmotionseries.jpg}
+  &lt;/div&gt;
+&lt;/li&gt;
+
+&lt;li class=&quot;media&quot;&gt;
+  &lt;div class=&quot;media-left&quot;&gt;
+    &lt;a href=&quot;ch01-intro/fig/Anaximander-Hecateus.png&quot;  class=&quot;fancybox&quot;&gt;
+      &lt;img class=&quot;media-object&quot; src=&quot;ch01-intro/fig/Anaximander-Hecateus.png&quot; width=&quot;250&quot; alt=&quot;...&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;h4 class=&quot;media-heading&quot;&gt;Figure 1.7&lt;/h4&gt;
+    &lt;strong&gt;Reconstructions of ancient Greek world maps&lt;/strong&gt;  &lt;br/&gt;
+    &lt;em&gt;Source:&lt;/em&gt; \url {https://commons.wikimedia.org}, public domain
+  &lt;/div&gt;
+&lt;/li&gt;
+
+&lt;li class=&quot;media&quot;&gt;
+  &lt;div class=&quot;media-left&quot;&gt;
+    &lt;a href=&quot;ch01-intro/fig/plot-weather.png&quot;  class=&quot;fancybox&quot;&gt;
+      &lt;img class=&quot;media-object&quot; src=&quot;ch01-intro/fig/plot-weather.png&quot; width=&quot;250&quot; alt=&quot;...&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;h4 class=&quot;media-heading&quot;&gt;Figure 1.8&lt;/h4&gt;
+    &lt;strong&gt;Robert Plot&#39;s *History of the Weather*&lt;/strong&gt; The graph records the daily barometric pressure in Oxford for the year 1684. &lt;br/&gt;
+    &lt;em&gt;Source:&lt;/em&gt; \citet {Plot:1685}, author image collection
+  &lt;/div&gt;
+&lt;/li&gt;
+
+&lt;li class=&quot;media&quot;&gt;
+  &lt;div class=&quot;media-left&quot;&gt;
+    &lt;a href=&quot;ch01-intro/fig/huygens1669.png&quot;  class=&quot;fancybox&quot;&gt;
+      &lt;img class=&quot;media-object&quot; src=&quot;ch01-intro/fig/huygens1669.png&quot; width=&quot;250&quot; alt=&quot;...&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;h4 class=&quot;media-heading&quot;&gt;Figure 1.9&lt;/h4&gt;
+    &lt;strong&gt;Huygen&#39;s survival graph&lt;/strong&gt; Christian Huygens&#39;s 1669 curve showing how many people out of a hundred survive between the ages of infancy and eighty-six. &lt;br/&gt;
+    &lt;em&gt;Source:&lt;/em&gt; Author image collection
+  &lt;/div&gt;
+&lt;/li&gt;
+
+&lt;li class=&quot;media&quot;&gt;
+  &lt;div class=&quot;media-left&quot;&gt;
+    &lt;a href=&quot;ch01-intro/fig/priestley-chart-biography-edit.png&quot;  class=&quot;fancybox&quot;&gt;
+      &lt;img class=&quot;media-object&quot; src=&quot;ch01-intro/fig/priestley-chart-biography-edit.png&quot; width=&quot;250&quot; alt=&quot;...&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;h4 class=&quot;media-heading&quot;&gt;Figure 1.10&lt;/h4&gt;
+    &lt;strong&gt;Chart of biography&lt;/strong&gt; Lifespans of fifty-nine famous people in the six centuries before Christ. &lt;br/&gt;
+    &lt;em&gt;Source:&lt;/em&gt; From \citet {Priestley:1765}, author image collection
+  &lt;/div&gt;
+&lt;/li&gt;
+
+&lt;li class=&quot;media&quot;&gt;
+  &lt;div class=&quot;media-left&quot;&gt;
+    &lt;a href=&quot;ch01-intro/fig/marey-trains.png&quot;  class=&quot;fancybox&quot;&gt;
+      &lt;img class=&quot;media-object&quot; src=&quot;ch01-intro/fig/marey-trains.png&quot; width=&quot;250&quot; alt=&quot;...&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;h4 class=&quot;media-heading&quot;&gt;Figure 1.11&lt;/h4&gt;
+    &lt;strong&gt;Graphical train schedule&lt;/strong&gt; E. J. Marey&#39;s (1878) graphical train schedule, showing all trains between Paris and Lyon each day. &lt;br/&gt;
+    &lt;em&gt;Source:&lt;/em&gt; Author image collection
+  &lt;/div&gt;
+&lt;/li&gt;
+
+&lt;li class=&quot;media&quot;&gt;
+  &lt;div class=&quot;media-left&quot;&gt;
+    &lt;a href=&quot;ch01-intro/fig/Minard-cotton3.png&quot;  class=&quot;fancybox&quot;&gt;
+      &lt;img class=&quot;media-object&quot; src=&quot;ch01-intro/fig/Minard-cotton3.png&quot; width=&quot;250&quot; alt=&quot;...&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;h4 class=&quot;media-heading&quot;&gt;Figure 1.12&lt;/h4&gt;
+    &lt;strong&gt;Cotton imports&lt;/strong&gt; A sequence of three graphs showing the sources of cotton imports to Europe for 1858, 1864 and 1865. &lt;br/&gt;
+    &lt;em&gt;Source:&lt;/em&gt; Courtesy Library of Congress
+  &lt;/div&gt;
+&lt;/li&gt;
+
+&lt;/ul&gt; &lt;!-- media-list --&gt;</code></pre>
+</div>
+<p><!-- col-md-12 --> NULL</p>
+</div>
+<!--end contents -->
+</div>
+
+&nbsp;
+<hr />
+<p style="text-align: center;">Copyright &copy; 2019 Michael Friendly. All rights reserved.</p>
+<p style="text-align: center;"><span style="color: #808080;"><em>friendly AT yorku DOT ca</em></span></p>
+
+<!-- Add font awesome icons -->
+<p style="text-align: center;">
+    <a href="http://www.datavis.ca" class="fa fa-firefox"></a>&nbsp; &nbsp; &nbsp;
+    <a href="https://twitter.com/datavisFriendly?lang=en" class="fa fa-twitter"></a>&nbsp; &nbsp; &nbsp;
+    <a href="https://github.com/friendly/" class="fa fa-github"></a>&nbsp; &nbsp; &nbsp;
+    <a itemprop="sameAs" content="https://orcid.org/0000-0002-3237-0941" href="https://orcid.org/0000-0002-3237-0941" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0002-3237-0941</a>
+</p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

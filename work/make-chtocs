@@ -1,0 +1,13 @@
+grep chapter TOGS.toc | mtoc2html | perl -pe 's|\d+\}||; \
+ s|<dd>(\d+)\.(.*)</dd>|<dd>\1. <a href="ch0\1.html">\2</a></dd>|; \
+ s|\d+\}||;s|</dd>chapter.*$|</dd>|' > Web/chtoc.html
+
+grep chapter TOGS.toc | mtoc2html | perl -pe 's|\d+\}||; s|</dd>chapter.*$|</dd>|' > Web/chtoc-nohref.html
+
+# make yaml menu
+
+grep chapter TOGS.toc | mtoc2html | perl -pe 's|\d+\}||; s|</dd>chapter.*$|</dd>|; \
+ s|<dd>(\d+)\.(.*)</dd>|\t\t-text: "\1. \2"\n\t\t\thref: ch0\1.html|; s|<.*>$||m' > Web/chtoc.yaml
+
+
+ \1. <a href="ch0\1.html">\2</a></dd>|; \
