@@ -6,7 +6,7 @@ bibliography: [book.bib]
 biblio-style: apalike
 ---
 
-```{r out.width="100%", echo=FALSE, eval=TRUE}
+```{r out.width="80%", echo=FALSE, eval=TRUE}
 knitr::include_graphics("images/playfair-cover-title-70.png")
 ```
 
